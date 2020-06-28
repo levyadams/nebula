@@ -9,8 +9,17 @@ router.get('/status', (req, res, next) => {
   res.status(200).json({ status: 'ok' });
 });
 
-router.post('/signup', passport.authenticate('signup', { session: false }), async (req, res, next) => {
-  res.status(200).json({ message: 'signup successful' });
+router.post('/signup', passport.authenticate('signup', { session: false }), async (err, res, next) => {
+  console.log(res);
+  try{
+    if(res){
+      console('response is '+ res);
+      res.status(200).json({ message: 'signup successful' });
+    }
+  }
+  catch(error){
+    return next(error);
+  }
 });
 
 router.post('/login', async (req, res, next) => {
