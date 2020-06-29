@@ -17,7 +17,7 @@ router.post('/signup', passport.authenticate('signup', { session: false }), asyn
       res.status(200).json({ message: 'signup successful' });
     }
   }
-  catch(error){
+  catch(err){
     return next(error);
   }
 });
