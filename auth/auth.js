@@ -16,9 +16,12 @@ passport.use('signup', new localStrategy({
     if(!user){
       return done(null,false,{message:'fuckle.'});
     }
-    return done(null, user,{message:'signed up! noyce bitch!'});
+    else{
+
+      return done(null, user,{message:'signed up! noyce bitch!'});
+    }
   } catch (error) {
-    return done({message:error});
+    return done(error);
   }
 }));
 
