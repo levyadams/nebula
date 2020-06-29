@@ -2,10 +2,10 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../../App.svelte",
-    "../../Header.svelte",
-    "../../List.svelte",
-    "../../signup.svelte"
+    "../../../proto/App.svelte",
+    "../../../proto/Header.svelte",
+    "../../../proto/List.svelte",
+    "../../../proto/signup.svelte"
   ],
   "sourcesContent": [
     "<script>\n import Header from './modules/Header.svelte';\n import List from './modules/List.svelte';\n</script>\n<main>\n<Header/>\n<List/>\n</main>\n\n<link\n  href=\"https://fonts.googleapis.com/css2?family=VT323&display=swap\"\n  rel=\"stylesheet\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n<style type=\"text/scss\">:global(html) {\n  background: #570157; }\n\n:global(body, h1, h2, h3, h4, html) {\n  margin: 0;\n  padding: 0; }\n\nmain {\n  width: 100%;\n  height: 100%;\n  font-family: \"VT323\", monospace;\n  text-align: center;\n  background: #14242b;\n  margin: 0;\n  padding: 0; }\n\n/*# sourceMappingURL=App.svelte.css.map */</style>",
