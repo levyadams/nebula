@@ -9,9 +9,9 @@ router.get('/status', (req, res, next) => {
   res.status(200).json({ status: 'ok' });
 });
 
-router.post('/signup', async (req, res, next) => {
-  return next(res);
-});
+// router.post('/signup', async (req, res, next) => {
+//   return next(res);
+// });
 
 
 router.post('/login', async (req, res, next) => {
