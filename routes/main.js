@@ -16,7 +16,7 @@ router.post('/signup', passport.authenticate('signup', { session: false }), asyn
     }
     else{
 
-      return next(error);
+      return next(err);
     }
   
 });
@@ -30,6 +30,8 @@ router.post('/login', async (req, res, next) => {
       }
       if(!user){
       const error = new Error('no user');
+        return next(error);
+
     }
       req.login(user, { session: false }, async (error) => {
         if (error) return next(error);
