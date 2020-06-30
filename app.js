@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 });
 
 app.use(( err, req, res, next ) => {
-  res.locals.error = err;
+  // res.locals.error = err;
   if (err.status >= 100 && err.status < 600)
     res.status(err.status);
   else
@@ -60,7 +60,7 @@ app.use(( err, req, res, next ) => {
     res.json({
       message: err.message
     });
-    console.log(res);
+    console.log(err.message);
 });
 
 // have the server start listening on the provided port
