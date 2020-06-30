@@ -9,7 +9,7 @@ router.get('/status', (req, res, next) => {
   res.status(200).json({ status: 'ok' });
 });
 
-router.post('http://localhost:3000/signup', passport.authenticate('signup', { session: false }), async (err, res, next) => {
+router.post('/signup', passport.authenticate('signup', { session: false }), async (err, res, next) => {
     if(res){
       return res.status(200).json({ message: 'signup successful' });
     }
@@ -20,7 +20,7 @@ router.post('http://localhost:3000/signup', passport.authenticate('signup', { se
   
 });
 
-router.post('http://localhost:3000/login', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
   passport.authenticate('login', async (err, user, info) => {
     try {
       if (err) {
