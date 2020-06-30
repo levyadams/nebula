@@ -11,9 +11,7 @@ passport.use('signup', new localStrategy({
   passReqToCallback: true
 }, async (req, email, password, done) => {
   try {
-    console.log('fudge?');
     const { name } = req.body;
-    console.log(req + ' is req');
     const user = await UserModel.create({ email, password, name});
     if(!user){
       return done(null,false,{message:'fuck'});
