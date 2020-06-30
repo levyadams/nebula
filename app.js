@@ -60,6 +60,7 @@ app.use(( err, req, res, next ) => {
     res.json({
       message: err.message
     });
+    console.log(res);
 });
 
 // have the server start listening on the provided port
