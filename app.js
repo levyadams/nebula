@@ -46,10 +46,10 @@ app.get('/', function (req, res) {
 app.use('/', routes);
 app.use('/', passport.authenticate('jwt', { session : false }), secureRoutes);
 
-// catch all other routes
-// app.use((req, res, next) => {
-//   res.status(404).json({ message: '404 - Not Found' });
-// });
+catch all other routes
+app.use((req, res, next) => {
+  res.status(404).json({ message: '404 - Not Found' });
+});
 
 // handle errors
 app.use((err, req, res, next) => {
