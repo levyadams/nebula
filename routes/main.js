@@ -10,13 +10,11 @@ router.get('/status', (req, res, next) => {
 });
 
 router.post('/signup', passport.authenticate('signup', { session: false }), async (err, res, next) => {
-    if(res){
-      return res.status(200).json({ message: 'signup successful' });
-    }
-    else{
-
-      return next(err);
-    }
+  if(err){
+    
+    return next(err);
+  }
+  return res.status(200).json({ message: 'signup successful' });
   
 });
 
