@@ -54,7 +54,7 @@ app.use((req, res, next) => {
 // handle errors
 app.use((err, req, res, next) => {
   // TODO: add note about updating this
-  console.log(err.message);
+  console.log(err.message + ' is the error message');
   res.status(err.status || 500).json({ error: err.message });
 });
 
