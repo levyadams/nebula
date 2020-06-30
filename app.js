@@ -51,13 +51,13 @@ app.use((req, res, next) => {
   res.status(404).json({ message: '404 - Not Found' });
 });
 
-// handle errors
-app.use((err, req, res, next) => {
-  // TODO: add note about updating this
-  console.log(req + ' is the req');
-  console.log(res + ' is the res');
-  console.log(err.message + ' is the error message');
- return res.status(err.status || 500).json({ error: err.message });
+app.use(( err, req, res, next ) => {
+  res.locals.error = err;
+  if (err.status >= 100 && err.status < 600)
+    res.status(err.status);
+  else
+    res.status(500);
+  res.render('error');
 });
 
 // have the server start listening on the provided port
