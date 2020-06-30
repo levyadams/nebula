@@ -25,7 +25,7 @@ mongoose.connection.on('connected', function () {
 const app = express();
 
 // update express settings
-app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
 app.use(cookieParser());
 
