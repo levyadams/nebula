@@ -10,6 +10,7 @@ passport.use('signup', new localStrategy({
   passwordField: 'password',
   passReqToCallback: true
 }, async (req, email, password, done) => {
+  console.log('fudge?');
   try {
     const { name } = req.body;
     console.log(req);
