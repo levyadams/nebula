@@ -59,7 +59,7 @@ app.use(( err, req, res, next ) => {
   else
     res.status(500);
    
-    console.log(err);
+    console.log(err.status);
 });
 
 // have the server start listening on the provided port
