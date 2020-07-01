@@ -10,7 +10,10 @@ router.get('/status', (req, res, next) => {
 });
 
 router.post('/signup', async (req, res, next) => {
-  return next(console.log(res));
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+  return next(console.log('HEY!'));
 });
 
 

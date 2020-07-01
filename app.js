@@ -29,6 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-f
 app.use(bodyParser.json()); // parse application/json
 app.use(cookieParser());
 
+
 // require passport auth
 require('./auth/auth');
 
