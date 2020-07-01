@@ -11,7 +11,7 @@ const routes = require('./routes/main');
 const secureRoutes = require('./routes/secure');
 
 // setup mongo connection
-const uri = 'mongodb://localhost:27017/nebula';
+const uri = 'mongodb://localhost:27017/test';
 mongoose.connect(uri, { useNewUrlParser : true, useCreateIndex: true, useUnifiedTopology: true });
 mongoose.connection.on('error', (error) => {
   console.log(error);
