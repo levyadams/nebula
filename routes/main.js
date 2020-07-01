@@ -10,7 +10,7 @@ router.get('/status', (req, res, next) => {
 });
 
 router.post('/signup', async (req, res, next) => {
-  return next(res);
+  return next(console.log(res));
 });
 
 
