@@ -52,14 +52,12 @@ app.use((req, res, next) => {
 });
 
 app.use(( err, req, res, next ) => {
-  res.error = err;
+  res.locals.error = err;
   if (err.status >= 100 && err.status < 600)
     res.status(err.status);
   else
     res.status(500);
-    res.json({
-      message: err.message
-    });
+   
     console.log(err);
 });
 
