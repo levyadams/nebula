@@ -10,7 +10,7 @@ router.get('/status', (req, res, next) => {
 });
 
 router.post('/signup', async (req, res, next) => {
-  return res.status(200).json({ message: 'signup successful' });
+  return next(res.status(200).json({ message: 'signup successful' }));
 });
 
 
