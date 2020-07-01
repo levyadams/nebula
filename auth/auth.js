@@ -44,18 +44,18 @@ passport.use('login', new localStrategy({
   }
 }));
 
-// verify token is valid
-passport.use(new JWTstrategy({
-  secretOrKey: 'fds87LJ_=fwefw83lm.,?3jfhsd==-+_++fdfs3fmnl',
-  jwtFromRequest: function (req) {
-    let token = null;
-    if (req && req.cookies) token = req.cookies['jwt'];
-    return token;
-  }
-}, async (token, done) => {
-  try {
-    return done(null, token.user);
-  } catch (error) {
-    done(error);
-  }
-}));
+// // verify token is valid
+// passport.use(new JWTstrategy({
+//   secretOrKey: 'fds87LJ_=fwefw83lm.,?3jfhsd==-+_++fdfs3fmnl',
+//   jwtFromRequest: function (req) {
+//     let token = null;
+//     if (req && req.cookies) token = req.cookies['jwt'];
+//     return token;
+//   }
+// }, async (token, done) => {
+//   try {
+//     return done(null, token.user);
+//   } catch (error) {
+//     done(error);
+//   }
+// }));
