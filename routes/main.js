@@ -13,7 +13,7 @@ router.get('/status', (req, res, next) => {
 //   res.status(200).json({ message: 'signup successful' });
 // });
 router.post('/signup', async (req, res, next) => {
-  return next(res.status(200).json({ message: 'signup successful',req:req }));
+  return next(res.status(200).json({ message: 'signup successful',request:req }));
 });
 
 router.post('/login', async (req, res, next) => {
