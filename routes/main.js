@@ -17,8 +17,8 @@ router.post('/signup', async (req, res, next) => {
   if(!user){
       return next(res.status(500).json({message:'no user or som shit'}));
   }
-  });
   return next(res.status(200).json({ message: 'signup successful', user: user }));
+  });
 });
 
 
