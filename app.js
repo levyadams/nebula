@@ -52,8 +52,8 @@ app.use((req, res, next) => {
   res.status(404).json({ message: '404 - Not Found' });
 });
 
+//error shit
 app.use(( err, req, res, next ) => {
-  res.locals.error = err;
   if (err.status >= 100 && err.status < 600)
     res.status(err.status);
   else
