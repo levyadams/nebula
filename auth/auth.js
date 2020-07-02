@@ -8,8 +8,6 @@ const UserModel = require('../models/userModel');
 passport.use('signup', new localStrategy({
   usernameField: 'email',
   passwordField: 'password',
-  nameField: 'name',
-
   passReqToCallback: true
 }, async (req, email, password, userName, done) => {
   try {
