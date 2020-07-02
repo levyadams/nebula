@@ -10,8 +10,8 @@ router.get('/status', (req, res, next) => {
 });
 
 router.post('/signup', passport.authenticate('signup', async (req, res) => {
-  if(req.user){
-    return req.user;
+  if(req){
+    return console.log(req.user);
   }
 }));
 // router.post('/signup', async (req, res, next) => {
