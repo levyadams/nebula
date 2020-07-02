@@ -16,9 +16,11 @@ passport.use('signup', new localStrategy({
     const { name } = req.body;
     const user = await UserModel.create({ email, password, userName});
     if(!user){
+      console.log('shit');
       return done(null,false,{message:'fuck'});
     }
     else{
+      console.log('shit');
       return done(null, user,{message:'signed up! noyce bitch!'});
     }
   } catch (error) {
