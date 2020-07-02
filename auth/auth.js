@@ -5,26 +5,23 @@ const JWTstrategy = require('passport-jwt').Strategy;
 const UserModel = require('../models/userModel');
 
 // handle user registration
-passport.use('signup', new localStrategy({
-  usernameField: 'email',
-  passwordField: 'password',
-  passReqToCallback: true
-}, async (req, email, password, userName, done) => {
-  console.log('fucker');
-  try {
-    const { name } = req.body;
-    const user = await UserModel.create({ email, password, userName});
-    if(!user){
-      console.log('shit');
-      return done(null,false,{message:'fuck'});
-    }
-    else{
-      console.log('shit');
-      return done(null, user,{message:'signed up! noyce bitch!'});
-    }
-  } catch (error) {
-    return done(error);
-  }
+passport.use('signup', new localStrategy(
+   async (req, email, password, userName, done) => {
+  console.log('fucker'+ email);
+  // try {
+  //   const { name } = req.body;
+  //   const user = await UserModel.create({ email, password, userName});
+  //   if(!user){
+  //     console.log('shit');
+  //     return done(null,false,{message:'fuck'});
+  //   }
+  //   else{
+  //     console.log('shit');
+  //     return done(null, user,{message:'signed up! noyce bitch!'});
+  //   }
+  // } catch (error) {
+  //   return done(error);
+  // }
 }));
 
 // handle user login
