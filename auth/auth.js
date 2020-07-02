@@ -11,20 +11,19 @@ passport.use('signup', new localStrategy({
   nameField: 'name',
 
   passReqToCallback: true
-}, async (req, email, password, done) => {
-  console.log('woooo!');
-  // try {
-  //   const { name } = req.body;
-  //   const user = await UserModel.create({ email, password, name});
-  //   if(!user){
-  //     return done(null,false,{message:'fuck'});
-  //   }
-  //   else{
-  //     return done(null, user,{message:'signed up! noyce bitch!'});
-  //   }
-  // } catch (error) {
-  //   return done(error);
-  // }
+}, async (req, email, password, userName, done) => {
+  try {
+    const { name } = req.body;
+    const user = await UserModel.create({ email, password, userName});
+    if(!user){
+      return done(null,false,{message:'fuck'});
+    }
+    else{
+      return done(null, user,{message:'signed up! noyce bitch!'});
+    }
+  } catch (error) {
+    return done(error);
+  }
 }));
 
 // handle user login
