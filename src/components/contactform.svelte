@@ -1,4 +1,4 @@
-<form name="contact" action="" method="POST" data-netlify="true">
+<form name="contact" method="POST" netlify data-netlify="true">
     <p>
       <label>Your Name/Organization: <input type="text" name="name" /></label>   
     </p>
