@@ -26,17 +26,18 @@ let colors = [
             color0:'#264653',
             color1:'#e9c46a',
             color2:'#2a9d8f',
-            color3:'#f4a261',
-            color4:'#e76f51'
+            color3:'black',
+            color4:'black',
+
 
         },
         {
             name:'icecream',
             color0:'#bde0fe',
             color1:'#974e69',
-            color2:'#cdb4db',
-            color3:'#ffc8dd',
-            color4:'#a2d2ff'
+            color2:'#974e69',
+            color3:'#cdb4db',
+            color4:'#cdb4db',
         },
         {
             name:'lightDark',
@@ -44,7 +45,7 @@ let colors = [
             color1:'#343a40',
             color2:'#ced4da',
             color3:'#6c757d',
-            color4:'#212529'
+            color4:'#e2cdfd'
 
         },
         {
@@ -79,7 +80,6 @@ let colors = [
 
                 }
                 else{
-                    console.log('else');
                     color0 = colors[x+1].color0;
                     color1 = colors[x+1].color1;
                     color2 = colors[x+1].color2;
