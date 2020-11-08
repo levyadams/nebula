@@ -21,8 +21,8 @@
 
       let submitForm =(el)=>{
           var oReq = new XMLHttpRequest();
-        oReq.open('POST','/');
-        oReq.send(($user, 0, 2));
+        oReq.open('POST','');
+        oReq.send(JSON.parse($user, 0, 2));
 
       };
   </script>
