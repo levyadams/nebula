@@ -11,7 +11,7 @@
 
         <input type="text" bind:value={$user.phone} />
     </label>
-    <button on:submit|preventDefault={(e)=>{submitForm(e)}}>Reach out</button>
+    <button on:click|preventDefault={submitForm}>Reach out</button>
   </form>
 <p>
 </p>
@@ -19,10 +19,21 @@
   <script>
       import { user } from "../store.js";
 
-      let submitForm =(el)=>{
+      let submitForm =(event)=>{
+          event.preventDefault();
           var oReq = new XMLHttpRequest();
         oReq.open('POST','');
-        oReq.send(JSON.parse($user, 0, 2));
+        oReq.send($user);
+          // Define what happens on successful data submission
+        oReq.addEventListener( 'load', function( event ) {
+            alert( 'Yeah! Data sent and response loaded.' );
+        } );
+
+        // Define what happens in case of error
+        oReq.addEventListener(' error', function( event ) {
+            alert( 'Oops! Something went wrong.' );
+        } );
+        return false;
 
       };
   </script>
