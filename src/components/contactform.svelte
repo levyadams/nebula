@@ -16,20 +16,13 @@
     import { user } from "../store.js";
 
     let submitForm =(event)=>{
+        
         event.preventDefault();
+
         var oReq = new XMLHttpRequest();
        
-
-        oReq.addEventListener( 'load', function( event ) {
-            alert( 'Yeah! Data sent and response loaded.' );
-        } );
-
-        // Define what happens in case of error
-        oReq.addEventListener(' error', function( event ) {
-            alert( 'Oops! Something went wrong.' );
-        } );
-
         oReq.open('POST','#');
+
         oReq.send($user);
 
     };
