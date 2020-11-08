@@ -22,7 +22,7 @@
       let submitForm =(event)=>{
           event.preventDefault();
           var oReq = new XMLHttpRequest();
-        oReq.open('POST','/');
+        oReq.open('POST','#');
         oReq.send($user);
           // Define what happens on successful data submission
         oReq.addEventListener( 'load', function( event ) {
