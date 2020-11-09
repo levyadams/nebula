@@ -9,7 +9,7 @@
         <label>Telephone<input type="text" bind:value={$user.phone} /></label>
     </p>
 
-    <button on:click|preventDefault={submitForm}>Reach out</button>
+    <button on:click|preventDefault>Reach out</button>
 </form>
 
 <script>
