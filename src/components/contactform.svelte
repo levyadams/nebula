@@ -9,18 +9,17 @@
         <label>Telephone<input type="text" bind:value={$user.phone} /></label>
     </p>
 
-    <button>Reach out</button>
+    <button on:click|preventDefault={submitForm}>Reach out</button>
 </form>
 
 <script>
     import { user } from "../store.js";
-	import { afterUpdate } from 'svelte';
 
-     afterUpdate (()=>{
+    let submitForm =(event)=>{
 
         event.preventDefault();
        
-        fetch('', {
+        fetch('#', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
@@ -28,7 +27,7 @@
         body: $user
         });
 
-    });
+    };
 </script>
 
 <style>
