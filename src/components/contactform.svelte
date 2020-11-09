@@ -17,7 +17,7 @@
 
     let submitForm =(event)=>{
 
-        fetch('/contact/', {
+        fetch('#', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
