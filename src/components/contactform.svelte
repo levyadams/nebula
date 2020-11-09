@@ -19,7 +19,7 @@
 
         event.preventDefault();
        
-        fetch('#', {
+        this.fetch('#', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
