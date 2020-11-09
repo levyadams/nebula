@@ -17,13 +17,23 @@
 
     let submitForm =(event)=>{
 
-        fetch('/', {
+        fetch('', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
         },
         body: $user
-        });
+        }).then(response => {
+            if (response.ok) {
+            return response.json()
+            } else if(response.status === 404) {
+            return Promise.reject('error 404')
+            } else {
+            return Promise.reject('some other error: ' + response.status)
+            }
+        })
+        .then(data => console.log('data is', data))
+        .catch(error => console.log('error is', error));
 
     };
 </script>
