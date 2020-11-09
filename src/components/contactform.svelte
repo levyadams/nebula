@@ -16,14 +16,23 @@
     import { user } from "../store.js";
 
     let submitForm =(event)=>{
-        
+
         event.preventDefault();
-
-        var oReq = new XMLHttpRequest();
        
-        oReq.open('POST','#');
-
-        oReq.send($user);
+        fetch('#', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: $user
+        })
+        .then(response => response.json())
+        .then(data => {
+        console.log('Success:', data);
+        })
+        .catch((error) => {
+        console.error('Error:', error);
+        });
 
     };
 </script>
