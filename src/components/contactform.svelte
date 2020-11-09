@@ -1,4 +1,4 @@
-<form class="content">
+<form action="#" class="content">
     <p>
         <label>Name<input type="text" bind:value={$user.name} /></label>
     </p>
@@ -9,7 +9,7 @@
         <label>Telephone<input type="text" bind:value={$user.phone} /></label>
     </p>
 
-    <button on:click|preventDefault>Reach out</button>
+    <button on:click|preventDefault={submitForm}>Reach out</button>
 </form>
 
 <script>
@@ -17,8 +17,6 @@
 
     let submitForm =(event)=>{
 
-        event.preventDefault();
-       
         fetch('/contact/', {
         method: 'POST', // or 'PUT'
         headers: {
