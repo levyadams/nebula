@@ -19,7 +19,7 @@
 
         event.preventDefault();
        
-        fetch('#', {
+        fetch('/contact/', {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/json',
