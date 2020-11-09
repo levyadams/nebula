@@ -14,8 +14,9 @@
 
 <script>
     import { user } from "../store.js";
+	import { afterUpdate } from 'svelte';
 
-    let submitForm =(event)=>{
+     afterUpdate (()=>{
 
         event.preventDefault();
        
@@ -27,7 +28,7 @@
         body: $user
         });
 
-    };
+    });
 </script>
 
 <style>
