@@ -8,6 +8,7 @@
     <p>
         <label>Telephone<input type="text" bind:value={$user.phone} /></label>
     </p>
+    <input type="hidden" name="form-name" value="contact" />
 
     <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
 </form>
