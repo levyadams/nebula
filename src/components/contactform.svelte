@@ -1,17 +1,17 @@
 <form name="contact" method="POST" data-netlify="true">
     <p>
-        <label>Name<input type="text" bind:value={$user.name} /></label>
+        <label>Name<input type="text"/></label>
     </p>
     <p>
-        <label>E-mail<input type="text" bind:value={$user.email} /></label>
+        <label>E-mail<input type="text" /></label>
     </p>
     <p>
-        <label>Telephone<input type="text" bind:value={$user.phone} /></label>
+        <label>Telephone<input type="text" /></label>
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
 </form>
-<button on:click|preventDefault={submitForm} type="submit">Reach out</button>
+<button type="submit">Reach out</button>
 
 <script>
     import { user } from "../store.js";
