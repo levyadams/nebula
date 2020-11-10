@@ -21,7 +21,7 @@
         fetch("/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name":  newshit})
+        body: { "form-name":  newshit}
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
