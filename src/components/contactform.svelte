@@ -1,4 +1,4 @@
-<form action="#" class="content">
+<form name="contact" method="POST" data-netlify="true">
     <p>
         <label>Name<input type="text" bind:value={$user.name} /></label>
     </p>
@@ -9,7 +9,7 @@
         <label>Telephone<input type="text" bind:value={$user.phone} /></label>
     </p>
 
-    <button on:click|preventDefault={submitForm}>Reach out</button>
+    <button type="submit">Reach out</button>
 </form>
 
 <script>
