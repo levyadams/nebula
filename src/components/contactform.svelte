@@ -6,7 +6,7 @@ let submitForm =(event)=>{
     formdata.append('name',$user.name);
     formdata.append('email',$user.email);
     formdata.append('telephone',$user.telephone);
-        fetch("#", {
+        fetch("/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formdata,
