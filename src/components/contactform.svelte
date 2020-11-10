@@ -26,7 +26,7 @@
         .then(() => alert("Success!"))
         .catch(error => alert(error));
 
-      e.preventDefault();
+      event.preventDefault();
     }
 </script>
 
