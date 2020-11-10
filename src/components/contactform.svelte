@@ -10,18 +10,20 @@
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
-    <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
+    <button on:click|preventDefault={submitForm} type="submit">Reach out</button>
 </form>
 
 <script>
     import { user } from "../store.js";
 
     let submitForm =(event)=>{
+        let newshit = JSON.stringify($user)
+        console.log(newshit)
 
         fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": $user })
+        body: encode({ "form-name":  newshit})
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
