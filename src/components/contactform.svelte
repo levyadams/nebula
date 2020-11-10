@@ -1,4 +1,28 @@
-<form name="contact" method="POST" data-netlify="true">
+
+<script>
+let form;
+let submitForm =(event)=>{
+    let formdata = new FormData();
+    formdata.append('name',$user.name);
+    formdata.append('email',$user.email);
+    formdata.append('telephone',$user.telephone);
+        fetch("#", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formdata,
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+
+      event.preventDefault();
+    }
+
+    import { user } from "../store.js";
+
+   
+</script>
+
+<form bind:this={form} name="contact" method="POST" data-netlify="true">
     <p>
         <label>Name<input type="text" bind:value={$user.name} /></label>
     </p>
@@ -10,26 +34,9 @@
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
-    <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
+    <button on:click|preventDefault={submitForm} type="submit">Reach out</button>
 </form>
 
-<script>
-    import { user } from "../store.js";
-
-    let submitForm =(event)=>{
-        console.log($user)
-        // let encoded = encodeURI(lol)
-    //     fetch("#", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //     body: { "form-name":  lol}
-    //   })
-    //     .then(() => alert("Success!"))
-    //     .catch(error => alert(error));
-
-    //   event.preventDefault();
-    }
-</script>
 
 <style>
     form{
