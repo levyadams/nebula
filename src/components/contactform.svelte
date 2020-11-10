@@ -18,7 +18,7 @@
 
     let submitForm =(event)=>{
         let lol = 'fuckshitbitchcuntcocksuckermotherfuckerdicktwat'
-        let encoded = encodeURI(lol)
+        // let encoded = encodeURI(lol)
         console.log(encoded)
         fetch("#", {
         method: "POST",
