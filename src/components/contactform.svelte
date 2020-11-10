@@ -10,7 +10,7 @@
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
-    <button on:click|preventDefault={submitForm} type="submit">Reach out</button>
+    <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
 </form>
 
 <script>
@@ -18,7 +18,7 @@
 
     let submitForm =(event)=>{
         let newshit = JSON.stringify($user)
-        fetch("/", {
+        fetch("/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name":  newshit})
