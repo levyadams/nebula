@@ -1,27 +1,28 @@
 <form name="contact" method="POST" data-netlify="true">
     <p>
-        <label>Name<input type="text"/></label>
+        <label>Name<input type="text" bind:value={$user.name} /></label>
     </p>
     <p>
-        <label>E-mail<input type="text" /></label>
+        <label>E-mail<input type="text" bind:value={$user.email} /></label>
     </p>
     <p>
-        <label>Telephone<input type="text" /></label>
+        <label>Telephone<input type="text" bind:value={$user.phone} /></label>
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
-    <button type="submit">Reach out</button>
+    <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
 </form>
 
 <script>
     import { user } from "../store.js";
 
     let submitForm =(event)=>{
-        let newshit = JSON.stringify($user)
+        let encoded = encodeURI($user)
+        console.log(encoded)
         fetch("#", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: { "form-name":  newshit}
+        body: { "form-name":  encoded}
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
