@@ -10,8 +10,8 @@
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
+    <button type="submit">Reach out</button>
 </form>
-<button type="submit">Reach out</button>
 
 <script>
     import { user } from "../store.js";
