@@ -18,7 +18,7 @@
 
     let submitForm =(event)=>{
         let newshit = JSON.stringify($user)
-        fetch("/contact/", {
+        fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: { "form-name":  newshit}
