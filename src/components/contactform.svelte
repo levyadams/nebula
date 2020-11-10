@@ -9,7 +9,7 @@
         <label>Telephone<input type="text" bind:value={$user.phone} /></label>
     </p>
 
-    <button on:submit|preventDefault type="submit">Reach out</button>
+    <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
 </form>
 
 <script>
@@ -17,25 +17,16 @@
 
     let submitForm =(event)=>{
 
-        fetch('#', {
-        method: 'POST', // or 'PUT'
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: $user
-        }).then(response => {
-            if (response.ok) {
-            return response.json()
-            } else if(response.status === 404) {
-            return Promise.reject('error 404')
-            } else {
-            return Promise.reject('some other error: ' + response.status)
-            }
-        })
-        .then(data => console.log('data is', data))
-        .catch(error => console.log('error is', error));
+        fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": $user })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
 
-    };
+      e.preventDefault();
+    }
 </script>
 
 <style>
