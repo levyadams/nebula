@@ -10,7 +10,7 @@
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
-    <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
+    <button  type="submit">Reach out</button>
 </form>
 
 <script>
