@@ -17,7 +17,8 @@
     import { user } from "../store.js";
 
     let submitForm =(event)=>{
-        let encoded = encodeURI($user)
+        let lol = 'fuckshitbitchcuntcocksuckermotherfuckerdicktwat'
+        let encoded = encodeURI(lol)
         console.log(encoded)
         fetch("#", {
         method: "POST",
