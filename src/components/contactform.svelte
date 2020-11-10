@@ -23,7 +23,7 @@
         fetch("#", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: { "form-name":  encoded}
+        body: { "form-name":  lol}
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
