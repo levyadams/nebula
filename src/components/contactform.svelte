@@ -17,18 +17,17 @@
     import { user } from "../store.js";
 
     let submitForm =(event)=>{
-        let lol = 'fuckshitbitchcuntcocksuckermotherfuckerdicktwat'
+        console.log($user)
         // let encoded = encodeURI(lol)
-        console.log(encoded)
-        fetch("#", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: { "form-name":  lol}
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
+    //     fetch("#", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //     body: { "form-name":  lol}
+    //   })
+    //     .then(() => alert("Success!"))
+    //     .catch(error => alert(error));
 
-      event.preventDefault();
+    //   event.preventDefault();
     }
 </script>
 
