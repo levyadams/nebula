@@ -23,10 +23,10 @@
         }
         svg{
                 position: fixed;
-                bottom: 10px;
+                bottom:0;
                 left:0;
                 right:0;
-                top:94vh;
+                top:80vh;
                 margin:0 auto;
             }
        
