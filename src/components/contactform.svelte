@@ -3,9 +3,9 @@
 let form;
 let submitForm =(event)=>{
     let formdata = new FormData();
-    formdata.append('name',$user.name);
-    formdata.append('email',$user.email);
-    formdata.append('telephone',$user.telephone);
+    formdata.append('name',`${user.name}`);
+    formdata.append('email',`${user.email}`);
+    formdata.append('telephone',`${user.telephone}`);
         fetch("/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -24,13 +24,13 @@ let submitForm =(event)=>{
 
 <form bind:this={form} name="contact" method="POST" data-netlify="true">
     <p>
-        <label>Name<input type="text" bind:value={$user.name} /></label>
+        <label>Name<input type="text" name="name" bind:value={$user.name} /></label>
     </p>
     <p>
-        <label>E-mail<input type="text" bind:value={$user.email} /></label>
+        <label>E-mail<input type="text" name="email" bind:value={$user.email} /></label>
     </p>
     <p>
-        <label>Telephone<input type="text" bind:value={$user.phone} /></label>
+        <label>Telephone<input type="text" name="telephone" bind:value={$user.phone} /></label>
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
