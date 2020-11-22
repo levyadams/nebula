@@ -14,7 +14,7 @@ let submitForm =(event)=>{
         .then(() => alert("Success!"))
         .catch(error => alert(error));
 
-    //   event.preventDefault();
+      event.preventDefault();
     }
 
     import { user } from "../store.js";
@@ -43,6 +43,13 @@ let submitForm =(event)=>{
         max-width:30%;
         margin:0 auto;
     }
+
+    @media screen and (max-width:759px){
+        form{
+            max-width:100%;
+        }
+    }
+
     p>label{
         display: flex;
         justify-content: space-between;

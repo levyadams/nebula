@@ -7,13 +7,29 @@
 </div>
 
 <style>
-     svg{
+
+    
+     @media only screen and (max-width: 759px) {
+           
+            svg{
         cursor: pointer;
         position: absolute;
         top: -46px;
         left: 317px;
         transform: rotate(180deg);
+       
     }
+
+        }
+        svg{
+                position: fixed;
+                bottom: 10px;
+                left:0;
+                right:0;
+                top:94vh;
+                margin:0 auto;
+            }
+       
     .content-container{
         position: relative;
     }
