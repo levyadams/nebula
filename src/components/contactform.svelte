@@ -14,7 +14,7 @@ let submitForm =(event)=>{
         .then(() => alert("Success!"))
         .catch(error => alert(error));
 
-      event.preventDefault();
+    //   event.preventDefault();
     }
 
     import { user } from "../store.js";
