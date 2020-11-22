@@ -34,7 +34,7 @@ let submitForm =(event)=>{
     </p>
     <input type="hidden" name="form-name" value="contact" />
 
-    <button on:click|preventDefault={submitForm} on:submit|preventDefault type="submit">Reach out</button>
+    <button on:submit|preventDefault={submitForm} type="submit">Reach out</button>
 </form>
 
 
