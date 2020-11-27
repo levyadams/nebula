@@ -42,6 +42,7 @@ export default {
 				dedupe: ['svelte']
 			}),
 			commonjs(),
+			json(),
 
 			legacy && babel({
 				extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -57,7 +58,7 @@ export default {
 					['@babel/plugin-transform-runtime', {
 						useESModules: true
 					}],
-					json()
+					
 				]
 			}),
 
