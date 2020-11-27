@@ -2,9 +2,10 @@
 /src/node_modules/@sapper/
 /src/node_modules/*
 !/src/node_modules/crossfade.js
-
+!/src/node_modules/fadescale.js
 
 /node_modules/*
 !/node_modules/crossfade.js
+!/node_modules/fadescale.js
 yarn-error.log
 /__sapper__/
