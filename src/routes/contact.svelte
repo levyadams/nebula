@@ -4,7 +4,7 @@
     import Logo from '../components/logo.svelte';
     import ContactForm from '../components/contactform.svelte';
     import { cubicInOut } from 'svelte/easing';
-    import fadeScale from './../node_modules/fadeScale.js'
+    import fadeScale from 'fadescale'
 
     let formSubmitted;
 </script>

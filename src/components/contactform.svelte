@@ -5,7 +5,7 @@ export let formSubmit;
 export let error;
 import { user } from "../store.js";
 import { cubicInOut } from 'svelte/easing';
-import fadeScale from '../node_modules/fadeScale.js';
+import fadeScale from 'fadescale';
 
 let submitForm =(event)=>{
     let formdata = new FormData();
