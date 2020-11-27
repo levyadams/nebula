@@ -29,6 +29,15 @@
     font-size:53px;
     width:550px;
 }
+@media only screen and (max-width:425px){
+    .mobile-logo{
+        position: absolute;
+        top:93.5vh;
+        left:0;
+        right:100px;
+        margin:0 auto;
+    }
+}
 
 @media only screen and (max-width: 759px) {
     .intro{

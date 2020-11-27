@@ -2,6 +2,20 @@
 <script>
 	import Logo from '../components/logo.svelte';
 	import { send, receive } from "crossfade";
+
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+	if (window.netlifyIdentity) {
+		window.netlifyIdentity.on("init", user => {
+		if (!user) {
+			window.netlifyIdentity.on("login", () => {
+			document.location.href = "/admin/";
+			});
+		}
+		});
+	}
+	});
   </script>
 
 <style>
@@ -41,6 +55,7 @@
 
 <svelte:head>
 	<title>Joystick Nebula</title>
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </svelte:head>
 
 

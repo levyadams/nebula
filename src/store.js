@@ -5,5 +5,6 @@ export const user = writable({
   name: "",
   phone: "",
   email: "",
+  dropdown:'',
   message:""
 })

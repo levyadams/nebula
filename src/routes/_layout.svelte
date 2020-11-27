@@ -28,7 +28,7 @@
 		font-size:22px;
 		color: var(--color1);
 	}
-	:global(input,textarea){
+	:global(input,textarea,select){
 		font-size:18px;
 		text-align: center;
 		color: var(--color4);
@@ -40,6 +40,15 @@
 	:global(textarea){
 		height:200px;
 		width:70%;
+	}
+	:global(select){
+		width: 100%;
+		height:50px;
+		margin:20px 0 40px 0;
+		font-size:23px;
+		padding:8px;
+		max-width:100%;
+		
 	}
 	:global(button){
 		border-radius: 0 0 10px 10px;

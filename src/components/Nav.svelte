@@ -24,6 +24,7 @@
 	}
 
 	li {
+		font-weight: bold;
 		display: block;
 		float: left;
 	}
@@ -36,7 +37,7 @@
 	[aria-current]::after {
 		position: absolute;
 		content: '';
-		width: calc(100% - 1em);
+		width: calc(100% - .9em);
 		height: 2px;
 		background-color: rgb(255,62,0);
 		display: block;
@@ -54,8 +55,7 @@
 
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'samples' ? 'page' : undefined}" href="samples">3D Samples</a></li>
-
+		<li><a aria-current="{segment === 'articles' ? 'page' : undefined}" href="articles">Articles</a></li>
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">Contact/Pricing</a></li>

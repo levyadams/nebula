@@ -10,25 +10,27 @@
 
     
      @media only screen and (max-width: 759px) {
-           
+
+        svg{
+                position: fixed !important;
+                bottom:0 !important;
+                left:0 !important;
+                right:0 !important;
+                top:94.75vh !important;
+                margin:0 auto !important;
+            }
+
+        }
+      
             svg{
         cursor: pointer;
         position: absolute;
-        top: -46px;
-        left: 317px;
+        top: -43px;
+        left: 330px;
         transform: rotate(180deg);
        
     }
-
-        }
-        svg{
-                position: fixed;
-                bottom:0;
-                left:0;
-                right:0;
-                top:80vh;
-                margin:0 auto;
-            }
+       
        
     .content-container{
         position: relative;
