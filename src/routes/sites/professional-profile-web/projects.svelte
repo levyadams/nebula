@@ -1,8 +1,6 @@
 <script>
     import { send, receive } from "crossfade";
-import { identity } from "svelte/internal";
     import { fly, fade } from "svelte/transition";
-import { user } from "../../../../../starter/src/store";
   const fetchImage = (async () => {
         const response = await fetch('https://api.github.com/users/levyadams/repos')
         // console.log(response.json())
