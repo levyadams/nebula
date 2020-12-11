@@ -7,7 +7,8 @@
 <style>
 	main {
 		position: relative;
-		background-color: white;
+		background-color: rgb(82, 80, 80);
+		overflow: hidden;
 		padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
