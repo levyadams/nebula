@@ -68,6 +68,7 @@
 	.image-container {
 		display: flex;
 		justify-content: center;
+		flex-direction: column;
 	}
 	.howitworks-container {
 		display: flex;
