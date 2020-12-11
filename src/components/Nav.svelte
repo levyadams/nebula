@@ -1,14 +1,26 @@
 <script>
 	export let segment;
+	import Logo from './logo.svelte';
+	let currentColor;
+
+	$:{
+		if(segment === undefined){
+			currentColor = 'white';
+		}
+		if(segment === 'articles'){
+			currentColor="rgb(251, 107, 107)";
+		}
+		if(segment === 'examples'){
+			currentColor="rgb(119, 102, 244)";
+		}
+	}
 </script>
 
 <style>
 	nav {
-		display: flex;
-		justify-content: space-between;
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		background:black;
 		font-weight: 300;
-		padding: 0 1em;
+		padding: 1.5em 1em;
 	}
 
 	ul {
@@ -24,40 +36,53 @@
 	}
 
 	li {
-		font-weight: bold;
 		display: block;
 		float: left;
+		font-size:20px;
+		text-transform: uppercase;
+		
+	}
+	@media screen and (max-width:768px){
+		li{
+			font-size:14px;
+		}
 	}
 
-	[aria-current] {
+	.selected {
 		position: relative;
 		display: inline-block;
+		color:rgb(255, 255, 255);
+		font-weight: bold;
+		transition:all .4s ease-in-out;
 	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - .9em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
+	.selected1 {
+		position: relative;
+		display: inline-block;
+		color:rgb(119, 102, 244);
+		font-weight: bold;
+		transition:all .4s ease-in-out;
 	}
-
+	.selected2 {
+		position: relative;
+		display: inline-block;
+		color:rgb(251, 107, 107);
+		font-weight: bold;
+		transition:all .4s ease-in-out;
+	}
 	a {
 		text-decoration: none;
 		padding: 1em 0.5em;
 		display: block;
 	}
 </style>
-
+<Logo bind:color_0={currentColor}/>
 <nav>
-
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'articles' ? 'page' : undefined}" href="articles">Articles</a></li>
+		<li><a class='{segment === undefined ? "selected" : ""}' href='/dev/'>about</a></li>
+		<li><a class='{segment === "examples" ? "selected1" : ""}' href='/dev/examples'>examples</a></li>
+
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'contact' ? 'page' : undefined}" href="contact">Contact/Pricing</a></li>
+		<li><a rel=prefetch class='{segment === "articles" ? "selected2" : ""}' href='/dev/articles'>articles</a></li>
 	</ul>
 </nav>
