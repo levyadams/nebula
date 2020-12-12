@@ -27,7 +27,7 @@ let outro = false;
 
 <nav>
 	<ul>
-		<li><a  href='./sites/professional-profile-web'>professional profile</a></li>
+		<!-- <li><a  href='./sites/professional-profile-web'>professional profile</a></li> -->
 	</ul>
 </nav>
 </div>

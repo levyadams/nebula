@@ -262,6 +262,7 @@
         transform:translate(0,-30px);
     }
     img{
+        width:120px;
         max-width: 100%;
         }
         .profile-img{

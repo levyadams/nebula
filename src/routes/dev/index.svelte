@@ -161,10 +161,10 @@
 	</div>
 
 	<div class="worked-div">
-		<IntersectionObserver let:intersecting once="true" top={-20}>
+		<IntersectionObserver let:intersecting once="true" top={-10}>
 			{#if intersecting}
 				<h2
-					transition:fadeScale={{ delay: 1000, duration: 900, easing: cubicInOut, baseScale: 0.5 }}
+					transition:fadeScale={{ delay: 1000, easing: cubicInOut, baseScale: 0.5 }}
 					>
 					I have built websites and interactive web assets for:
 				</h2>
@@ -186,7 +186,7 @@
 				<IntersectionObserver let:intersecting once="true" top={-20}>
 					{#if intersecting}
 						<li 
-							transition:fly={{delay:700, x: 200, duration: 900 }}>
+							transition:fly={{delay:200, x: 200, duration: 900 }}>
 							General Motors
 						</li>
 					{/if}
@@ -195,7 +195,7 @@
 				<IntersectionObserver let:intersecting once="true" top={-20}>
 					{#if intersecting}
 						<li 
-							transition:fly={{ delay:1200, x: 200, duration: 900 }}>
+							transition:fly={{ delay:200, x: 200, duration: 900 }}>
 							AAA
 						</li>
 					{/if}
@@ -204,7 +204,7 @@
 				<IntersectionObserver let:intersecting once="true" top={-3}>
 					{#if intersecting}
 						<li
-							transition:fly={{ delay:1700,x: 200, duration: 900 }}>
+							transition:fly={{ delay:200,x: 200, duration: 900 }}>
 							Blue Cross Blue Shield
 						</li>
 					{/if}
@@ -213,7 +213,7 @@
 				<IntersectionObserver let:intersecting once="true" top={-20}>
 					{#if intersecting}
 						<li
-							transition:fly={{delay:1500, x: 200, duration: 900 }}>
+							transition:fly={{delay:200, x: 200, duration: 900 }}>
 							..And many more!
 						</li>
 						<a
