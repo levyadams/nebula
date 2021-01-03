@@ -7,7 +7,7 @@
 		if(segment === undefined){
 			currentColor = 'white';
 		}
-		if(segment === 'articles'){
+		if(segment === 'contact'){
 			currentColor="rgb(251, 107, 107)";
 		}
 		if(segment === 'examples'){
@@ -79,10 +79,10 @@
 <nav>
 	<ul>
 		<li><a class='{segment === undefined ? "selected" : ""}' href='/dev/'>about</a></li>
-		<li><a class='{segment === "examples" ? "selected1" : ""}' href='/dev/examples'>examples</a></li>
+		<li><a class='{segment === "examples" ? "selected1" : ""}' href='/sites/'>examples</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "articles" ? "selected2" : ""}' href='/dev/articles'>articles</a></li>
+		<li><a rel=prefetch class='{segment === "contact" ? "selected2" : ""}' href='/dev/contact'>contact</a></li>
 	</ul>
 </nav>

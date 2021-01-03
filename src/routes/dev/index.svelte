@@ -2,10 +2,8 @@
 	import { onMount } from "svelte";
 	import { fly, fade } from "svelte/transition";
 	import { cubicInOut } from "svelte/easing";
-	import { send, receive } from "crossfade";
 
-	import IntersectionObserver from "../../components/IntersectionObserver.svelte";
-	import fadeScale from "fadescale";
+	// import IntersectionObserver from "../../components/IntersectionObserver.svelte";
 	let outro = false;
 
 	onMount(async () => {
@@ -69,6 +67,7 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		align-items: center;
 	}
 	.howitworks-container {
 		display: flex;
@@ -151,85 +150,9 @@
 				class="linked-eyebrow">
 				connect on LinkedIn
 			</p></a>
-		<h2 class="small-headline">
-			I build fortune 500 web platforms as a day job.
-		</h2>
-		<p>
-			We are going to deploy your business website like the
-			<b>pros</b>.
-		</p>
 	</div>
 
-	<div class="worked-div">
-		<IntersectionObserver let:intersecting once="true" top={-10}>
-			{#if intersecting}
-				<h2
-					transition:fadeScale={{ delay: 1000, easing: cubicInOut, baseScale: 0.5 }}
-					>
-					I have built websites and interactive web assets for:
-				</h2>
-			{/if}
-		</IntersectionObserver>
-
-		<IntersectionObserver let:intersecting once="true" top={1}>
-			{#if intersecting}
-			<ul class="worked-list">
-				<IntersectionObserver let:intersecting once="true" top={-20}>
-					{#if intersecting}
-						<li 
-							transition:fly={{delay:200, x: 200, duration: 900 }}>
-							IPG
-						</li>
-					{/if}
-				</IntersectionObserver>
-
-				<IntersectionObserver let:intersecting once="true" top={-20}>
-					{#if intersecting}
-						<li 
-							transition:fly={{delay:200, x: 200, duration: 900 }}>
-							General Motors
-						</li>
-					{/if}
-				</IntersectionObserver>
-
-				<IntersectionObserver let:intersecting once="true" top={-20}>
-					{#if intersecting}
-						<li 
-							transition:fly={{ delay:200, x: 200, duration: 900 }}>
-							AAA
-						</li>
-					{/if}
-				</IntersectionObserver>
-
-				<IntersectionObserver let:intersecting once="true" top={-3}>
-					{#if intersecting}
-						<li
-							transition:fly={{ delay:200,x: 200, duration: 900 }}>
-							Blue Cross Blue Shield
-						</li>
-					{/if}
-				</IntersectionObserver>
-
-				<IntersectionObserver let:intersecting once="true" top={-20}>
-					{#if intersecting}
-						<li
-							transition:fly={{delay:200, x: 200, duration: 900 }}>
-							..And many more!
-						</li>
-						<a
-							href="https://www.linkedin.com/in/levy-adams-7ba962151/"><p
-								style="font-size:14px;"
-								class="linked-eyebrow">
-								connect on LinkedIn
-							</p></a>
-					{/if}
-				</IntersectionObserver>
-			</ul>
-			{/if}
-		</IntersectionObserver>
-
-	</div>
-	<IntersectionObserver let:intersecting top={-20}>
+	<!-- <IntersectionObserver let:intersecting top={-20}>
 		{#if intersecting}
 			<div 
 				transition:fade={{ duration: 700 }}
@@ -237,16 +160,10 @@
 				<div>
 					<h2>Like it or not<br />making money online isn't easy!</h2>
 					<p>The game is rigged with pitfalls and shortcomings.</p>
-					<p>
-						The reason I make big money is because I look at your
-						business goals as a whole.
-					</p>
-					<p>
-						When my clients succeed online they come back for more.
-					</p>
+				
 				</div>
 				<a class="big-button" href="/dev/examples">See live examples</a>
 			</div>
 		{/if}
-	</IntersectionObserver>
+	</IntersectionObserver> -->
 </div>
