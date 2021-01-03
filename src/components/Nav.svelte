@@ -79,7 +79,6 @@
 <nav>
 	<ul>
 		<li><a class='{segment === undefined ? "selected" : ""}' href='/dev/'>about</a></li>
-		<li><a class='{segment === '/' ? "selected" : ""}' href='/dev/'>about</a></li>
 		<li><a class='{segment === "examples" ? "selected1" : ""}' href='/sites/'>examples</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
