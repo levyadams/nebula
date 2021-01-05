@@ -1,6 +1,6 @@
 
 <script>
-    import ContactForm from '../../components/contactform.svelte';
+    import ContactForm from '../components/contactform.svelte';
     import { cubicInOut } from 'svelte/easing';
 
     let formSubmitted;
@@ -17,6 +17,7 @@
 
 <style>
 h1{
+    padding-top:40px;
     margin:0 auto;
     width:40%;
     text-align:center;

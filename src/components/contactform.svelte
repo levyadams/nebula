@@ -59,7 +59,7 @@
         <p>
             <label>Telephone<input style="width:50%;" type="text" name="telephone" bind:value={$user.phone} /></label>
         </p>
-        <label for="services">I am interested in:</label>
+        <label for="services">I am interested in:
         <select bind:value={user.dropdown} name="services" id="services" form="contact">
         <option value="website">a website for my business!</option>
         <option value="consultation">web consultation!</option>
@@ -67,6 +67,7 @@
         <option value="unity">3D interactive web experience!</option>
         </select>
         <input type="hidden" name="form-name" value="contact" />
+        </label>
         <p>
             <label>Additional info<textarea class="longInput" cols="30" rows="10" name="additional" bind:value={$user.message} /></label>
         </p>
@@ -75,7 +76,7 @@
     {/if}
     
     
-    <style>
+    <style lang="scss">
       
         h2,h3{
             text-align: center;
@@ -90,16 +91,50 @@
             position: absolute;
             left:0;
             right:0;
-            top:85px;
+            top:285px;
             width:40%;
             margin:0 auto;
         }
+
     
         @media screen and (max-width:759px){
             form{
             width:calc( 100% - 60px );
             }
         }
+
+        form{
+            button{
+                background:white;
+                width:100%;
+                height:50px;
+                font-size:30px;
+                border:none;
+                box-shadow: 0 0 14px 2px black;
+                border-radius:0 0px 15px 15px;
+            }
+            select{
+                width:100%;
+                height:60px;
+                text-align-last:right;
+                padding-right:32%;
+                font-size:20px;
+                @media screen and (max-width:1055px) {
+                    font-size:15px;
+                }
+               
+            }
+           
+        }
+        p{
+            &:first-child{
+                input{
+                    border-radius:15px 15px 0 0;
+
+                }
+            }
+        }
+
     
         p>label{
             display: flex;
